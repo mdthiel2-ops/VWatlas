@@ -1,0 +1,166 @@
+
+:root{
+  --bg:#0b1220;
+  --card:#0f1b33;
+  --muted:#93a4c7;
+  --text:#e9f0ff;
+  --accent:#59d3ff;
+  --accent2:#7cffc5;
+  --line:rgba(255,255,255,.08);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(89,211,255,.15), transparent 60%),
+              radial-gradient(900px 500px at 80% 20%, rgba(124,255,197,.12), transparent 55%),
+              var(--bg);
+  color:var(--text);
+}
+
+.shell{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 18px 14px 24px;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 16px;
+  background: rgba(15,27,51,.75);
+  border:1px solid var(--line);
+  border-radius:16px;
+  backdrop-filter: blur(10px);
+}
+
+.brand{display:flex; gap:12px; align-items:center}
+.brand h1{font-size:16px; margin:0}
+.brand .sub{margin:2px 0 0; font-size:12px; color:var(--muted)}
+.dot{
+  width:14px; height:14px; border-radius:50%;
+  background: conic-gradient(from 90deg, var(--accent), var(--accent2), var(--accent));
+  box-shadow: 0 0 0 3px rgba(89,211,255,.12);
+}
+
+.pill{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+
+.chat{
+  margin-top:14px;
+  height: 520px;
+  overflow:auto;
+  padding: 14px;
+  border-radius:16px;
+  background: rgba(15,27,51,.55);
+  border:1px solid var(--line);
+}
+
+.msg{
+  display:flex;
+  gap:10px;
+  margin: 10px 0;
+}
+
+.avatar{
+  width:34px; height:34px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--line);
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size:12px;
+}
+
+.bubble{
+  max-width: 78%;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  line-height:1.35;
+  font-size:14px;
+  white-space:pre-wrap;
+}
+
+.user .bubble{
+  margin-left:auto;
+  background: rgba(89,211,255,.10);
+  border-color: rgba(89,211,255,.22);
+}
+
+.assistant .bubble{
+  background: rgba(124,255,197,.08);
+  border-color: rgba(124,255,197,.18);
+}
+
+.meta{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:6px;
+  font-size:11px;
+  color: var(--muted);
+}
+
+.chips{
+  margin-top:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.chip{
+  background: rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  color: var(--text);
+  border-radius:999px;
+  padding:8px 10px;
+  font-size:12px;
+  cursor:pointer;
+}
+.chip:hover{border-color: rgba(89,211,255,.35)}
+
+.composer{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  align-items:flex-end;
+}
+textarea{
+  flex:1;
+  resize:none;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+  outline:none;
+  min-height: 42px;
+}
+textarea:focus{border-color: rgba(89,211,255,.45)}
+
+.send{
+  padding: 10px 14px;
+  border-radius: 14px;
+  border:1px solid rgba(89,211,255,.35);
+  background: rgba(89,211,255,.12);
+  color: var(--text);
+  cursor:pointer;
+}
+.send:hover{background: rgba(89,211,255,.18)}
+
+.disclaimer{
+  margin-top:12px;
+  font-size:12px;
+  color: var(--muted);
+  border-left: 3px solid rgba(89,211,255,.40);
+  padding-left:10px;
+}
